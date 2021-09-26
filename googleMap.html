@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Google Map</title>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
   </head>
   <body>
-    <div id="map">Google Map</div>
+    <div id="map"></div>
+
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script>
-		var map;
-		function initMap()
-		{
-			map = google.maps.Map(document.getElementById('map'),
-			{
-				center: {lat: -34.397, lng: 150.644},
-				zoom: 8
-			});
-		}
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap"
-		async defer>
-		</script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap&v=weekly"
+      async
+    ></script>
   </body>
 </html>
