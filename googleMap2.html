@@ -8,16 +8,29 @@
 
 <body>
   <div id="map" style="width:600px; height: 400px;"></div>
+  <h2>Static Google Map</h2>
+  <div>
+	<img src="https://maps.googleapis.com/maps/api/staticmap?center=37.50883828045309,127.06310692306407&zoom=17&size=400x400&key=AIzaSyCVZff6PH-3CBeBv_ZS3mgApEG30-Jj_sE"></img>
+  </div>
+  <h2>Embed Google Map</h2>
+  <div>
+	  <iframe
+	  width="600"
+	  height="450"
+	  frameborder="0" style="border:0"
+	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVZff6PH-3CBeBv_ZS3mgApEG30-Jj_sE&parameters&center=37.50883828045309,127.06310692306407" allowfullscreen
+	  >
+	  </iframe>
+  </div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap&region=kr"></script>
   <script>
     function initMap() {
 		var seoul = { lat: 37.50883828045309 ,lng: 127.06310692306407 };
 		var map = new google.maps.Map(
         document.getElementById('map'), {
-          zoom: 20,
+          zoom: 17,
           center: seoul
         });
-      
     }
   </script>
 </body>
