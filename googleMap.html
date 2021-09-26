@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-	<title>구글 지도</title>
-</head>
-<body>
-<h2>
-	googleMap API
-</h2>
-<div>
-	<span>Hello google!</span>
-</div>
-
-</body>
+  <head>
+    <title>Google Map</title>
+  </head>
+  <body>
+    <div id="map">Google Map</div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap&v=weekly"
+      async
+    ></script>
+  </body>
 </html>
