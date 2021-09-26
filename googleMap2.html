@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <title>Google Map</title>
+	<meta charset="utf-8">
+	<title>Google Map</title>
+	<script>
+	function initMap()
+	{
+		var seoul = { lat: 37.50883828045309 ,lng: 127.06310692306407 };
+		var map = new google.maps.Map(
+			document.getElementById('map'), {
+				zoom: 17,
+				center: seoul
+			});
+	}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap&region=kr"></script>
 </head>
 
 <body>
-  <div id="map" style="width:600px; height: 400px;"></div>
-  <h2>Static Google Map</h2>
-  <div>
+	<h2>Javascript Google Map</h2>
+	<div id="map" style="width:600px; height: 400px;"></div>
+	<h2>Static Google Map</h2>
+	<div>
 	<img src="https://maps.googleapis.com/maps/api/staticmap?center=37.50883828045309,127.06310692306407&zoom=17&size=400x400&key=AIzaSyCVZff6PH-3CBeBv_ZS3mgApEG30-Jj_sE"></img>
-  </div>
-  <h2>Embed Google Map</h2>
-  <div>
-	  <iframe
-	  width="600"
-	  height="450"
-	  frameborder="0" style="border:0"
-	  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVZff6PH-3CBeBv_ZS3mgApEG30-Jj_sE&q=coex&center=37.50883828045309,127.06310692306407&region=kr&language=ko" allowfullscreen
-	  >
-	  </iframe>
-  </div>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiEf-H8SNhtKWWMZjX1dKZWXCrIl-6uTY&callback=initMap&region=kr"></script>
-  <script>
-    function initMap() {
-		var seoul = { lat: 37.50883828045309 ,lng: 127.06310692306407 };
-		var map = new google.maps.Map(
-        document.getElementById('map'), {
-          zoom: 17,
-          center: seoul
-        });
-    }
-  </script>
+	</div>
+	<h2>Embed Google Map</h2>
+	<div>
+		<iframe
+		width="600"
+		height="450"
+		frameborder="0" style="border:0"
+		src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCVZff6PH-3CBeBv_ZS3mgApEG30-Jj_sE&q=coex&center=37.50883828045309,127.06310692306407&region=kr&language=ko" allowfullscreen
+		>
+		</iframe>
+	</div>
 </body>
 </html>
