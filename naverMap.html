@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="map" style="width:100%;height:800px;"></div>
-
+<div id="map2" style="width:500px;height:70%;"></div>
 <script>
 	var mapOptions = {
 		center: new naver.maps.LatLng(37.3595704, 127.105399),
@@ -21,6 +21,16 @@
 			position: new naver.maps.LatLng(37.3595704, 127.105399),
 			map: map
 		});
+
+	var map2 = new naver.maps.Map('map2', {
+		center: new naver.maps.LatLng(37.3595704, 127.105399),
+		zoom: 15
+	});
+
+	var marker = new naver.maps.Marker({
+		position: new naver.maps.LatLng(37.3595704, 127.105399),
+		map: map2
+	});
 </script>
 
 </body>
