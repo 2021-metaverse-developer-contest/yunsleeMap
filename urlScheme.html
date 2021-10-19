@@ -3,14 +3,36 @@
   <head>
     <title>url Scheme</title>
 	<script>
-		window.location = 'unitydl://mylink?scene1'
+		var qs = getQueryStringObject();
+		var scene = qs.scene;
+		var name = qs.name;
+		var categoryMain = qs.categoryMain;
+		var categorySub = qs.categorySub;
+		var scheme = '42';
+		var hostname = 'coU';
+		// window.location = 'unitydl://mylink?scene1'
+		// legacy
+		// var windowLocation = '42://coU?scene' + scene + '&' + 'name' + ' ' + 'categoryMain' + '' + 'categorySub';
+		var windowLocation = format('{0}://{1}?scene={2}&name={3}&categoryMain={4}&categorySub={5}',
+							scheme,hostname,scene,name,categoryMain,categorySub);
+		window.location = windowLocation;
+
+		function getQueryStringObject() {
+			var a = window.location.search.substr(1).split('&');
+			if (a == "") return {};
+			var b = {};
+			for (var i = 0; i < a.length; ++i)
+			{
+				var p = a[i].split('=', 2);
+				if (p.length == 1)
+					b[p[0]] = "";
+				else
+					b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+			}
+			return b;
+		}
 	</script>
   </head>
   <body>
-    <div id="urlScheme">
-		<h1>
-			<a href="unitydl://mylink?scene1">open App</a>
-		</h1>
-	</div>
   </body>
 </html>
