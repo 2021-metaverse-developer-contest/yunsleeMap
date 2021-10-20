@@ -10,12 +10,19 @@
 		var categorySub = qs.categorySub;
 		var scheme = '42';
 		var host = 'coU';
-		// legacy
+
 		// var windowLocation = string.format('{0}://{1}?scene={2}&name={3}&categoryMain={4}&categorySub={5}',
 		// 					scheme,hostname,scene,name,categoryMain,categorySub);
+
 		var windowLocation = `${scheme}://${host}?scene=${scene}&name=${name}&categoryMain=${categoryMain}&categorySub=${categorySub}`
+		// var windowLocation = `hello world`;
 		console.log(windowLocation);
-		window.location = windowLocation;
+		// window.location = windowLocation;
+		// https://exgs.github.io/yunsleeMap/42://coU?scene=undefined&name=undefined&categoryMain=undefined&categorySub=undefined
+        // var redirectToApp = function(windowLocation) {
+        //     document.location = windowLocation;
+        // };
+        window.onload = windowLocation;
 
 		function getQueryStringObject() {
 			var a = window.location.search.substr(1).split('&');
