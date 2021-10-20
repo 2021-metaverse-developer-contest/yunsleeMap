@@ -16,7 +16,15 @@
 			document.getElementById("urlScheme").setAttribute("href", windowLocation);
 		}
 		window.onload = setValueHref;
-		
+
+		function openLink () {
+		var appWindow = window.open(window, "_blank");
+		setTimeout( function () {if (appWindow) {
+			appWindow.location ="https://www.example.com";
+			}
+			},1000);
+		}
+		openLink();
 	</script>
   </head>
   <body>
