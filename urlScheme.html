@@ -19,10 +19,17 @@
 		console.log(windowLocation);
 		// window.location = windowLocation;
 		// https://exgs.github.io/yunsleeMap/42://coU?scene=undefined&name=undefined&categoryMain=undefined&categorySub=undefined
-        var redirectToApp = function(windowLocation) {
-            document.location = windowLocation;
-        };
-        window.onload = redirectToApp;
+        // var redirectToApp = function(windowLocation) {
+        //     document.location = windowLocation;
+        // };
+        // window.onload = redirectToApp;
+
+		var setValueHref = function() 
+		{
+			document.getElementById("urlScheme").setAttribute("href", windowLocation);
+		}
+		window.onload = setValueHref;
+		
 
 		function getQueryStringObject() {
 			var a = window.location.search.substr(1).split('&');
@@ -41,5 +48,10 @@
 	</script>
   </head>
   <body>
+	  <h1>
+			<a id="urlScheme" href="#">
+			상대방의 위치를 확인하시겠습니까?
+			</a>
+	  </h1>
   </body>
 </html>
