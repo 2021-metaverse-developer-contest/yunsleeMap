@@ -5,10 +5,11 @@
 	<script>
 		var windowLocation = `unitydl://mylink?scene1`
 		console.log(windowLocation);
-        // var redirectToApp = function(windowLocation) {
-        //     document.location = windowLocation;
-        // };
-        // window.onload = redirectToApp;
+        var redirectToApp = function() {
+            // document.location = windowLocation;
+            window.location = windowLocation;
+        };
+        window.onload = redirectToApp;
 
 		var setValueHref = function() 
 		{
