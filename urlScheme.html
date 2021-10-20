@@ -19,10 +19,10 @@
 		console.log(windowLocation);
 		// window.location = windowLocation;
 		// https://exgs.github.io/yunsleeMap/42://coU?scene=undefined&name=undefined&categoryMain=undefined&categorySub=undefined
-        // var redirectToApp = function(windowLocation) {
-        //     document.location = windowLocation;
-        // };
-        window.onload = windowLocation;
+        var redirectToApp = function(windowLocation) {
+            document.location = windowLocation;
+        };
+        window.onload = redirectToApp;
 
 		function getQueryStringObject() {
 			var a = window.location.search.substr(1).split('&');
