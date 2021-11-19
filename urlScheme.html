@@ -14,7 +14,11 @@
 		// 					scheme,hostname,scene,name,categoryMain,categorySub);
 		// var windowLocation = `${scheme}://${host}?scene=${scene}&name=${name}&categoryMain=${categoryMain}&categorySub=${categorySub}`
 		
-		var a = window.location.search.substr(1).split(',');
+		// Input URL Format
+		// window.location == "https://exgs.github.io/yunsleeMap/urlScheme.html?parameter={0},{1},{2}",
+		
+		var temp = "?parameter=";
+		var a = window.location.search.substr(temp.length).split(',');
 		var name = a[0];
 		var categoryMain = a[1];
 		var categorySub = a[2];
